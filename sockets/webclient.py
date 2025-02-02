@@ -16,7 +16,7 @@ def main():
 
     data = (
         f"""
-GET / HTTP/1.1
+GET /index.html HTTP/1.1
 Host: {domain}
 Content-Type: {content_type}
 Content-Length: {content_length}
