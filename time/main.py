@@ -1,4 +1,3 @@
-import datetime
 from math import trunc
 import time
 import socket
@@ -7,7 +6,7 @@ from datetime import datetime
 
 def main():
     client = socket.socket()
-    client.connect(('time.nist.gov', 37))
+    client.connect(("time.nist.gov", 37))
     response = bytes()
 
     while True:
@@ -24,12 +23,12 @@ def main():
     )
     delta = nist_time - system_time
 
-    print('NIST time:', nist_time)
-    print('System time:', system_time)
-    print(f'Error {delta:.2f}')
+    print("NIST time:", nist_time)
+    print("System time:", system_time)
+    print(f"Error {delta:.2f}")
 
     client.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
